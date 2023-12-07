@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} lineBot.jar
+VOLUME /tmp
+ADD target/lineBot-0.0.1-SNAPSHOT.jar /lineBot.jar
+EXPOSE 8080
 ENTRYPOINT ["java","-jar","/lineBot.jar"]
