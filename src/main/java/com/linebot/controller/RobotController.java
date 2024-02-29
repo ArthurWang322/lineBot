@@ -12,7 +12,7 @@ public class RobotController {
 
     @GetMapping("/test")
     public ResponseEntity<String> test() {
-        return new ResponseEntity<String>("Hello,123!!", HttpStatus.OK);
+        return new ResponseEntity<String>("Hello,456!!", HttpStatus.OK);
     }
 
 }
